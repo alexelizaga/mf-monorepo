@@ -1,0 +1,31 @@
+
+> remote1@1.0.0 dev
+> webpack serve --port 3011 --config webpack.config.cjs
+
+[1G[0K<i> [1m[32m[webpack-dev-server] Project is running at:[39m[22m
+<i> [1m[32m[webpack-dev-server] Loopback: [36mhttp://localhost:3011/[39m, [36mhttp://[::1]:3011/[39m[39m[22m
+<i> [1m[32m[webpack-dev-server] On Your Network (IPv4): [36mhttp://192.168.0.14:3011/[39m[39m[22m
+<i> [1m[32m[webpack-dev-server] On Your Network (IPv6): [36mhttp://[fd4d:8ca8:dfa4:e84e:c8e:2409:827:bf5c]:3011/[39m[39m[22m
+<i> [1m[32m[webpack-dev-server] Content not from webpack is served from '[36m/Users/alexelizaga/Dev/Turborepo/React/my-mf-monorepo/apps/remote1/public[39m' directory[39m[22m
+<i> [1m[32m[webpack-dev-server] 404s will fallback to '[36m/index.html[39m'[39m[22m
+assets by chunk 60.3 KiB (id hint: vendors)
+  asset [1m[32mvendors-node_modules_react_index_js.js[39m[22m 47.1 KiB [1m[32m[emitted][39m[22m (id hint: vendors) 1 related asset
+  asset [1m[32mvendors-node_modules_react_jsx-runtime_js.js[39m[22m 13.2 KiB [1m[32m[emitted][39m[22m (id hint: vendors) 1 related asset
+asset [1m[32mmain.js[39m[22m 183 KiB [1m[32m[emitted][39m[22m (name: main) 1 related asset
+asset [1m[32mremoteEntry.js[39m[22m 182 KiB [1m[32m[emitted][39m[22m (name: remote1) 1 related asset
+asset [1m[32msrc_Widget_tsx.js[39m[22m 1.07 KiB [1m[32m[emitted][39m[22m 1 related asset
+asset [1m[32mindex.html[39m[22m 218 bytes [1m[32m[emitted][39m[22m
+runtime modules 84.5 KiB 34 modules
+built modules 168 KiB (javascript) 84 bytes (share-init) 84 bytes (consume-shared) [1m[33m[built][39m[22m
+  modules by path [1m../../node_modules/[39m[22m 167 KiB 18 modules
+  modules by path [1m./src/[39m[22m 295 bytes
+    [1m./src/index.ts[39m[22m 103 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    [1m./src/Widget.tsx[39m[22m 192 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  provide-module modules 84 bytes
+    [1mprovide shared module (default) react/jsx-runtime@19.2.0 = ../../node_modules/re...(truncated)[39m[22m 42 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    [1mprovide shared module (default) react@19.2.0 = ../../node_modules/react/index.js[39m[22m 42 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  consume-shared-module modules 84 bytes
+    [1mconsume shared module (default) react/jsx-runtime@* (singleton) (fallback: ../.....(truncated)[39m[22m 42 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+    [1mconsume shared module (default) react@* (singleton) (fallback: ../../node_module...(truncated)[39m[22m 42 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+  [1mcontainer entry[39m[22m 42 bytes [1m[33m[built][39m[22m [1m[33m[code generated][39m[22m
+webpack 5.102.1 compiled [1m[32msuccessfully[39m[22m in 761 ms
