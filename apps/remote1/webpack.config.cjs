@@ -1,8 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
-const { container } = webpack;
 
+const { container } = webpack;
 const ModuleFederationPlugin = container.ModuleFederationPlugin;
 
 /** @type {import('webpack').Configuration} */
@@ -24,10 +24,14 @@ const config = {
     new ModuleFederationPlugin({
       name: "remote1",
       filename: "remoteEntry.js",
+      remotes: {
+        host: "host@http://localhost:3000/remoteEntry.js"
+      },
       exposes: { "./Widget": "./src/Widget" },
       shared: {
         react: { singleton: true, requiredVersion: false},
         "react-dom": { singleton: true, requiredVersion: false},
+        zustand: { singleton: true, requiredVersion: false },
         "react/jsx-runtime": { singleton: true, requiredVersion: false}
       }
     })

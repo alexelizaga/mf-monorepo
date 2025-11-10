@@ -15,28 +15,25 @@ const config = {
     path: path.resolve(__dirname, "dist"),
     clean: true
   },
-  resolve: {
-    extensions: [".tsx", ".ts", ".jsx", ".js"]
-  },
+  resolve: { extensions: [".tsx", ".ts", ".jsx", ".js"] },
   module: {
-    rules: [
-      {
-        test: /\.[jt]sx?$/,
-        loader: "ts-loader",
-        exclude: /node_modules/
-      }
-    ]
+    rules: [{ test: /\.[jt]sx?$/, loader: "ts-loader", exclude: /node_modules/ }]
   },
   plugins: [
     new HtmlWebpackPlugin({ template: "public/index.html" }),
     new ModuleFederationPlugin({
       name: "host",
+      filename: "remoteEntry.js",
       remotes: {
         remote1: "remote1@http://localhost:3011/remoteEntry.js"
+      },
+      exposes: {
+        './store': './src/shared/store.ts',   // 👈 aquí exponemos el store
       },
       shared: {
         react: { singleton: true, requiredVersion: false },
         "react-dom": { singleton: true, requiredVersion: false},
+        zustand: { singleton: true, requiredVersion: false },
         "react/jsx-runtime": { singleton: true, requiredVersion: false}
       }
     })
